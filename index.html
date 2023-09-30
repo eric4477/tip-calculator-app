@@ -17,12 +17,39 @@
   </head>
   <body>
     <div class="title">
-      <h2><span style="display: block">SPLI</span><span>TTER</span></h2>
+      <img src="images/logo.svg" />
     </div>
 
-    <div class="tip-calculator-container">
-      <div class="tip-input-container"></div>
-      <div class="tip-output-container"></div>
+    <div class="card">
+      <div class="left-card">
+        <div class="bill-container">
+          <label class="bill-label" for="bill">Bill</label>
+          <input type="number" placeholder="0" />
+          <span class="logo">
+            <img src="images/icon-dollar.svg" alt="dollar-icon" />
+          </span>
+        </div>
+        <div class="tip-container">
+          <label class="tip-label" for="tip">Select Tip %</label>
+          <div class="tip-buttons">
+            <button class="tip-button">5%</button>
+            <button class="tip-button">10%</button>
+            <button class="tip-button">15%</button>
+            <button class="tip-button">25%</button>
+            <button class="tip-button">50%</button>
+            <input type="number" placeholder="Custom" />
+          </div>
+        </div>
+        <div class="number-of-people-container">
+          <label for="people">Number of People</label>
+
+          <input type="number" placeholder="0" />
+          <span class="logo">
+            <img src="images/icon-person.svg" alt="dollar-icon" />
+          </span>
+        </div>
+      </div>
+      <div class="right-card"></div>
     </div>
 
     <!-- <div class="attribution">

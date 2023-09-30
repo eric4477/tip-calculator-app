@@ -1,3 +1,96 @@
+@import "general";
+
 body {
-  background-color: black;
+  background-color: $lightGrayishCyan;
+  padding-top: 5%;
+  height: 100vh;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+.title {
+  width: 10%;
+  margin: 0 auto;
+  /* margin-top: 8rem; */
+}
+
+.card {
+  max-width: 55rem;
+  height: 29rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 1.8rem;
+  border-radius: 1.2rem;
+  background-color: $White;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+  display: flex;
+
+  .left-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+    flex-basis: 50%;
+    border-radius: 1rem;
+    padding: 0.7rem 0;
+    .bill-container {
+      width: 90%;
+      position: relative;
+    }
+    .tip-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .tip-buttons {
+        display: flex;
+        width: 90%;
+        row-gap: 15px;
+        column-gap: 12px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .tip-button {
+          flex-basis: 31%;
+          padding: 0.5rem;
+          font-size: 1.3rem;
+        }
+
+        input[type="number"] {
+          flex-basis: 31%;
+          margin: 0;
+          padding: 0.5rem;
+          border-radius: 5px;
+          font-size: 1.3rem;
+          caret-color: $primary;
+          background-color: $veryLightGrayishCyan;
+          color: $VeryDarkCyan;
+          text-align: center;
+          border: none;
+        }
+      }
+    }
+    .number-of-people-container {
+      width: 90%;
+      position: relative;
+    }
+  }
+
+  .right-card {
+    background-color: $VeryDarkCyan;
+    border-radius: 1rem;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */

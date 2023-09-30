@@ -1,0 +1,70 @@
+$primary: hsl(172, 67%, 45%);
+$VeryDarkCyan: hsl(183, 100%, 15%);
+$DarkGrayshCyan: hsl(186, 14%, 43%);
+$grayishCyan: hsl(184, 14%, 56%);
+$lightGrayishCyan: hsl(185, 41%, 84%);
+$veryLightGrayishCyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+input[type="number"] {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.4rem 1rem;
+  text-align: right;
+  font-size: 1.4rem;
+  color: $VeryDarkCyan;
+  font-weight: 700;
+  border: none;
+  background-color: $veryLightGrayishCyan;
+  border-radius: 5px;
+}
+input[type="number"]:focus,
+input[type="number"]:active {
+  outline: none;
+  border: none;
+}
+
+input[type="number"]::placeholder {
+  color: $DarkGrayshCyan;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+label {
+  color: $DarkGrayshCyan;
+}
+
+.logo {
+  position: absolute;
+  left: 15px;
+  top: 2.8rem;
+}
+
+.tip-button {
+  background-color: $VeryDarkCyan;
+  color: $White;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.tip-button:hover,
+.tip-button:hover:active {
+  background-color: $primary;
+  opacity: 0.7;
+}
+
+.tip-bottons input[type="number"]:focus {
+  outline: 1px solid $primary;
+  /* Add a border when the button is clicked */
+}
+
+.tip-bottons input[type="number"]::placeholder {
+  color: $VeryDarkCyan;
+  opacity: 0.7;
+}
