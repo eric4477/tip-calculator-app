@@ -81,9 +81,61 @@ body {
   .right-card {
     background-color: $VeryDarkCyan;
     border-radius: 1rem;
+    padding: 2rem 2.3rem;
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
+    gap: 0.8rem;
+    .tip-amount-container {
+      @include right-card-containers;
+      .tip-amount-person {
+        @include right-card-left-containers;
+      }
+      .tip-output-container {
+        @include right-card-right-containers;
+        .dollar-logo img {
+          @include right-card-logos;
+        }
+
+        .tip-output {
+          color: $primary;
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .tip-total-container {
+      @include right-card-containers;
+      .tip-total-person {
+        @include right-card-left-containers;
+      }
+      .total-output-container {
+        @include right-card-right-containers;
+        .dollar-logo img {
+          @include right-card-logos;
+        }
+        .total-output {
+          color: $primary;
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .reset-button {
+      margin-top: 6.5rem;
+      text-align: center;
+      padding: 0.6rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.3;
+      background-color: $primary;
+      color: $VeryDarkCyan;
+      transition: all 0.3s;
+    }
+    .reset-button:hover {
+      opacity: 1;
+      background-color: hsl(172, 72%, 65%);
+    }
   }
 }
 
