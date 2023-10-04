@@ -11,20 +11,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="./script/app.js" defer></script>
     <title>Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <div class="title">
-      <img src="images/logo.svg" />
-    </div>
+    <header>
+      <img class="title" src="images/logo.svg" />
+    </header>
 
     <div class="card">
       <div class="left-card">
         <div class="bill-container">
           <label class="bill-label" for="bill">Bill</label>
-          <input type="number" placeholder="0" />
+          <input class="bill-input" type="number" placeholder="0" />
           <span class="logo">
             <img src="images/icon-dollar.svg" alt="dollar-icon" />
           </span>
@@ -37,13 +38,16 @@
             <button class="tip-button">15%</button>
             <button class="tip-button">25%</button>
             <button class="tip-button">50%</button>
-            <input type="number" placeholder="Custom" />
+            <input class="custom-input" type="number" placeholder="Custom" />
           </div>
         </div>
         <div class="number-of-people-container">
-          <label for="people">Number of People</label>
+          <div class="labels">
+            <label for="people">Number of People</label>
+            <span class="people-input-check hidden">Can't be zero</span>
+          </div>
 
-          <input type="number" placeholder="0" />
+          <input class="people-input" type="number" placeholder="0" />
           <span class="logo">
             <img src="images/icon-person.svg" alt="dollar-icon" />
           </span>
@@ -56,11 +60,9 @@
             <p>/ person</p>
           </div>
           <div class="tip-output-container">
-            <div class="dollar-logo">
-              <img src="images/icon-dollar.svg" alt="dollar-logo" />
-            </div>
-
-            <span class="tip-output">0.00</span>
+            <h3 class="tip-output">
+              $<span class="tip-per-person">0.00</span>
+            </h3>
           </div>
         </div>
         <div class="tip-total-container">
@@ -69,11 +71,9 @@
             <p>/ person</p>
           </div>
           <div class="total-output-container">
-            <div class="dollar-logo">
-              <img src="images/icon-dollar.svg" alt="dollar-logo" />
-            </div>
-
-            <span class="total-output">0.00</span>
+            <h3 class="total-output">
+              $<span class="total-per-person">0.00</span>
+            </h3>
           </div>
         </div>
         <button class="reset-button">RESET</button>

@@ -1,9 +1,8 @@
 @import "general";
-
+@import "media";
 body {
   background-color: $lightGrayishCyan;
   padding-top: 5%;
-  height: 100vh;
 }
 
 * {
@@ -13,9 +12,11 @@ body {
   font-family: "Space Mono", monospace;
 }
 
-.title {
-  width: 10%;
+header {
+  max-width: 55rem;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
   /* margin-top: 8rem; */
 }
 
@@ -24,6 +25,7 @@ body {
   height: 29rem;
   margin: 0 auto;
   margin-top: 4rem;
+  margin-bottom: 3rem;
   padding: 1.8rem;
   border-radius: 1.2rem;
   background-color: $White;
@@ -52,6 +54,7 @@ body {
         column-gap: 12px;
         flex-direction: row;
         flex-wrap: wrap;
+
         .tip-button {
           flex-basis: 31%;
           padding: 0.5rem;
@@ -75,6 +78,14 @@ body {
     .number-of-people-container {
       width: 90%;
       position: relative;
+      .labels {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .people-input-check {
+          color: rgb(218, 62, 62);
+        }
+      }
     }
   }
 
@@ -84,6 +95,7 @@ body {
     padding: 2rem 2.3rem;
     flex-basis: 50%;
     display: flex;
+
     flex-direction: column;
     gap: 0.8rem;
     .tip-amount-container {
@@ -93,9 +105,6 @@ body {
       }
       .tip-output-container {
         @include right-card-right-containers;
-        .dollar-logo img {
-          @include right-card-logos;
-        }
 
         .tip-output {
           color: $primary;
@@ -110,9 +119,7 @@ body {
       }
       .total-output-container {
         @include right-card-right-containers;
-        .dollar-logo img {
-          @include right-card-logos;
-        }
+
         .total-output {
           color: $primary;
           font-size: 2.5rem;

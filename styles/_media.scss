@@ -1,0 +1,50 @@
+@media (max-width: 878px) {
+  .card {
+    flex-direction: column;
+    min-height: 60rem;
+    min-width: 100%;
+    .left-card {
+      flex-basis: 100%;
+      min-width: 100%;
+      margin-bottom: 2rem;
+      .bill-container {
+        min-width: 100%;
+      }
+      .tip-container {
+        min-width: 100%;
+
+        .tip-buttons {
+          width: 100% !important;
+          justify-content: space-between;
+          //   column-gap: 1.2rem !important;
+
+          .tip-button {
+            flex-basis: 46% !important;
+          }
+          input[type="number"] {
+            flex-basis: 46% !important;
+          }
+        }
+      }
+      .number-of-people-container {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .right-card {
+    h4 {
+      color: $veryLightGrayishCyan;
+      font-size: 0.8rem;
+    }
+    p {
+      color: $grayishCyan;
+      font-size: 0.7rem;
+    }
+    span {
+      font-size: 2.2rem;
+    }
+  }
+}

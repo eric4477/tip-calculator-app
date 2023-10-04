@@ -13,15 +13,27 @@ input[type="number"] {
   text-align: right;
   font-size: 1.4rem;
   color: $VeryDarkCyan;
+  caret-color: $primary;
   font-weight: 700;
   border: none;
   background-color: $veryLightGrayishCyan;
   border-radius: 5px;
 }
-input[type="number"]:focus,
-input[type="number"]:active {
-  outline: none;
-  border: none;
+
+.custom-input:active,
+.custom-input:focus {
+  outline: 1px solid $primary;
+}
+
+.bill-input:active,
+.bill-input:focus,
+.people-input:active,
+.people-input:focus {
+  outline: 2px solid $primary;
+}
+
+.hidden {
+  display: none;
 }
 
 input[type="number"]::placeholder {
@@ -53,13 +65,12 @@ label {
   transition: all 0.3s;
 }
 
-.tip-button:hover,
-.tip-button:hover:active {
+.tip-button:hover {
   background-color: $primary;
   opacity: 0.7;
 }
 
-.tip-bottons input[type="number"]:focus {
+.tip-bottons input[type="number"]:active {
   outline: 1px solid $primary;
   /* Add a border when the button is clicked */
 }
@@ -81,9 +92,15 @@ label {
   }
 }
 
+.active-btn {
+  background-color: $primary;
+  opacity: 0.7;
+}
+
 @mixin right-card-containers {
   display: flex;
   flex-direction: row;
+
   align-items: center;
   justify-content: space-between;
 }
@@ -98,18 +115,5 @@ label {
 @mixin right-card-right-containers {
   display: flex;
   flex-direction: row;
-  gap: 3px;
   padding-top: 1.3rem;
-}
-
-@mixin right-card-logos {
-  width: 1.2rem;
-  margin-top: 1rem;
-
-  filter: brightness(0) saturate(100%) invert(51%) sepia(100%) saturate(330%)
-    hue-rotate(122deg) brightness(102%) contrast(89%);
-}
-
-.reset-button:hover {
-  background-color: hsl(172, 72%, 65%);
 }
